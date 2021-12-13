@@ -16,12 +16,7 @@ class Parser
 
     public function __construct(protected string $html, protected string $baseURL)
     {
-        $this->html = $this->removeWhiteSpace($this->html);
-    }
 
-    public function removeWhiteSpace($html)
-    {
-        return str_replace(["\n", "\t", "\r", "  "], [" "], $html);
     }
 
     protected function getDomDocument($cached = true): DOMDocument
